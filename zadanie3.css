@@ -1,0 +1,62 @@
+body {
+background-image: url("imagine/pozadie.jpg");
+    background-size: cover ;
+
+
+}
+article{
+
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 20px;
+    height: auto;
+
+}
+nav{
+    text-align: center;
+}
+section{
+    background-color: orange;
+    border-radius: 5px;
+    padding: 20px;
+    height: auto;
+    background-color: rgba(255, 203, 5, 0.5);
+}
+input[type=text],[type=number],[type=date],[type=email]{
+    width: 100%;
+
+}
+input[type=radio]{
+    margin-left: 30px;
+}
+button[type=submit]{
+    width: 100%;
+    background-color: rgba(0, 230, 64, 0.8);
+}
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+}
+.hiddenCheckbox{
+    display: none;
+}
+
+textarea{
+width: 100%;
+}
+.meno{
+    visibility: hidden;
+    width: 20px;
+    left:0px;
+}
+.menu{
+    color: white;
+    font-weight: bold;
+}
+.menu1{
+    color: black;
+    font-weight: bold;
+}
+footer{
+    color: white;
+}

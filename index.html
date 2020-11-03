@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Lukáš Pribula - Zadanie 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="zadanie3.css">
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Formulár pre kúpu bicykla</h1>
+
+    </nav>
+
+</header>
+
+<main class="container ">
+    <form action="mailto:pribula329@gmail.com?subject=Formulár" method="post" accept-charset="UTF-8" onsubmit="return kontorla()"
+          enctype="text/plain" target="_blank" >
+        <div class="row">
+
+            <article class="col-md-6 form-group ">
+                <h1>Osobné údaje</h1>
+
+                <label for="meno" class="menu">Meno*:</label>
+                <input type="text" id="meno" placeholder="Zadajte meno" name="meno" class="form-control" required><br>
+                <label for="priezvisko" class="menu">Priezvisko*:</label>
+                <input type="text" id="priezvisko" placeholder="Zadajte priezvisko" name="priezvisko"
+                       class="form-control" required><br>
+                <label for="datum" class="menu">Dátum narodenia*:</label>
+                <input type="date" id="datum" name="datum" class="form-control" required><br>
+                <label for="vek" class="menu">Vek*:</label>
+                <input type="number" id="vek" placeholder="Zadajte vek" name="vek" class="form-control"
+                       onchange="porovnanie()" required>
+                <span id="textVek" class="menu"></span><br><br>
+                <label for="email" class="menu">Email*:</label>
+                <input type="email" id="email" placeholder="Zadajte email" name="email" class="form-control"
+                       onchange="emailValidacia()" required>
+                <span id="textEmail" class="menu"></span><br>
+
+                <p class="menu">Pohlavie:</p>
+                <input type="radio" id="muž" name="pohlavie" value="muz">
+                <label for="muž" class="menu">Muž</label>
+                <input type="radio" id="žena" name="pohlavie" value="zena">
+                <label for="žena" class="menu">Žena</label><br>
+            </article>
+
+            <section class="col-md-6 form-group ">
+                <h1> Výber bicykla</h1>
+                <p class="menu1">Vlastníte už bicykel?</p>
+
+                <input type="radio" id="ano" onclick="zobrazenieCheckboxu(1)" name="vlastnenie" value="ano">
+                <label for="ano" class="menu1">Áno</label>
+                <input type="radio" id="nie" onclick="zobrazenieCheckboxu(0)" name="vlastnenie" value="nie">
+                <label for="nie" class="menu1">Nie</label><br>
+                <div class="hiddenCheckbox form-group  menu1" id="hiddenCheckbox">
+                    <input type="checkbox" id="ctm" name="bike" value="ctm">
+                    <label for="ctm">CTM</label><br>
+                    <input type="checkbox" id="kenzel" name="bike" value="kenzel">
+                    <label for="kenzel">Kenzel</label><br>
+                    <input type="checkbox" id="dema" name="bike" value="dema">
+                    <label for="dema">Dema</label><br>
+                    <input type="checkbox" id="merida" name="bike" value="merida">
+                    <label for="merida">Merida</label><br>
+                    <label for="ine">Iné:</label>
+                    <input type="text" id="ine" placeholder="Zadajte značku bicykla" name="ine"
+                           class="form-control"><br>
+                </div>
+
+                <div id="znacky" class="form-group ">
+                    <label for="znacka" class="menu1">Značka</label>
+                    <div>
+                        <select id="znacka" name="znacka" onchange="vyberZnacku()" class="form-control">
+                            <option>Vyber značku</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="druhy" class="form-group  menu1">
+                    <div id="druh11">
+                        <label for="druh1">Druh</label>
+                        <select id="druh1" name="druh1" onchange="vyberDruh()" class="form-control">
+                            <option>Vyber druh</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div id="typy" class="form-group menu1">
+                    <div id="typy11">
+                        <label for="typ11">Typ</label>
+                        <select id="typ11" name="typ11" class="form-control">
+                            <option>Vyber typ</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+            </section>
+        </div>
+        <label for="textarea"></label>
+        <textarea id="textarea" name="textarea" rows="4" placeholder="Sem vložte svoje poznámky">
+        </textarea>
+
+        <button type="submit" > Odoslať</button>
+        <label for="textarea2"></label>
+        <textarea  id="textarea2"  name="textarea2" rows="1" class="meno">Lukas Pribula, ID:97911</textarea>
+
+    </form>
+</main>
+<footer><p>&#169; Pribula Web design</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
